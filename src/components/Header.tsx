@@ -63,17 +63,6 @@ export function Header({ user, onLogin, onLogout }: HeaderProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  onClick={onLogin}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-purple-600"
-                >
-                  <img
-                    src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
-                    alt="Google"
-                    className="h-5 w-5"
-                  />
-                  <span>Sign in with Google</span>
-                </Button>
               </motion.div>
             )}
           </div>

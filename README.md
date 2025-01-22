@@ -1,4 +1,5 @@
 # Google Calendar Events App
+![image](https://github.com/user-attachments/assets/e0300ae5-c867-4599-8923-477aee5588f1)
 
 This web application allows users to sign in with their Google account and view their upcoming Google Calendar events. Users can filter events by date to streamline their schedule management.
 
@@ -92,4 +93,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
 - [Google Calendar API](https://developers.google.com/calendar)
 
-This project was developed as part of a Software Developer Intern assignment to demonstrate proficiency in backend, frontend, and API integration skills, with a focus on attention to detail, UI/UX design, and code quality. 

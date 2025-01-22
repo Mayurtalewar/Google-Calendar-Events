@@ -16,7 +16,7 @@ export function Header({ user, onLogin, onLogout }: HeaderProps) {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="bg-background border-b border-border"
+      className="bg-background border-b border-border backdrop-blur-sm bg-background/80 sticky top-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -25,8 +25,10 @@ export function Header({ user, onLogin, onLogout }: HeaderProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Calendar className="h-8 w-8 text-primary" />
-            <h1 className="ml-2 text-xl font-semibold text-foreground">Calendar Events</h1>
+            <Calendar className="h-8 w-8 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent" />
+            <h1 className="ml-2 text-xl font-semibold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+              Calendar Events
+            </h1>
           </motion.div>
           
           <div className="flex items-center space-x-4">
@@ -37,19 +39,23 @@ export function Header({ user, onLogin, onLogout }: HeaderProps) {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
               >
-                <img
+                <motion.img
                   src={user.picture}
                   alt={user.name}
-                  className="h-8 w-8 rounded-full ring-2 ring-primary"
+                  className="h-8 w-8 rounded-full ring-2 ring-purple-500"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 />
-                <span className="text-sm font-medium text-foreground">{user.name}</span>
+                <span className="text-sm font-medium bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                  {user.name}
+                </span>
                 <Button
                   onClick={onLogout}
                   variant="outline"
-                  className="flex items-center space-x-2"
+                  className="flex items-center space-x-2 border-purple-500/20 hover:bg-purple-500/10"
                 >
-                  <LogOut className="h-4 w-4" />
-                  <span>Sign Out</span>
+                  <LogOut className="h-4 w-4 text-purple-500" />
+                  <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Sign Out</span>
                 </Button>
               </motion.div>
             ) : (
@@ -59,7 +65,7 @@ export function Header({ user, onLogin, onLogout }: HeaderProps) {
               >
                 <Button
                   onClick={onLogin}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-primary to-primary/80"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-purple-600"
                 >
                   <img
                     src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"

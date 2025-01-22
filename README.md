@@ -70,6 +70,7 @@ This application is deployed on Vercel. To deploy your own version:
 
 ## Additional Features
 
+- **Responsive Design**: Ensured the application is mobile-friendly and adapts to various screen sizes.
 - **Error Handling**: Displays error messages for failed authentication or data fetching.
 - **Loading Indicators**: Shows a spinner during data loading for better user experience.
 
